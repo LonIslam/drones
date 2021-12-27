@@ -1,0 +1,14 @@
+version: "2.2"
+services:
+  drones-database:
+    image: mongo:3.2.4
+    container_name: "drones-database"
+    ports:
+      - 27017:27017
+    command: --smallfiles
+  drones-service:
+    image: drones-service-docker-image
+    ports:
+      - 8080:8080
+    links:
+      - drones-database
