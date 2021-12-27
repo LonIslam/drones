@@ -14,21 +14,5 @@ class BeDronesApplicationTests {
 
     @Autowired
     DroneController droneController;
-
-//    @Test
-//    void contextLoads() {
-//        EmployeeDto employeeDto = new EmployeeDto();
-//        employeeDto.setAge(26);
-//        employeeDto.setName("Islam");
-//        employeeDto.setContractInformation("2 years contract");
-//
-//        ResponseEntity responseEntity = droneController.addEmployee(employeeDto);
-//        Assert.assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-//        EmployeeResponse createdEmployee = (EmployeeResponse) responseEntity.getBody();
-//        Assert.assertEquals(employeeDto.getAge(), createdEmployee.getAge());
-//        Assert.assertEquals(DroneState.ADDED, createdEmployee.getDroneState());
-//        Assert.assertEquals(employeeDto.getName(), createdEmployee.getName());
-//        Assert.assertEquals(employeeDto.getContractInformation(), createdEmployee.getContractInformation());
-//        Assert.assertNotNull(createdEmployee.getId());
-//    }
+    
 }
