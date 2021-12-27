@@ -27,7 +27,7 @@ public class DronesBatteryAudit {
     }
 
 
-    @Scheduled(cron = "0 * * * *")
+    @Scheduled(cron = "0 0 * * * *")
     public void checkDronesBatteryLevels() {
         List<Drone> droneList = dronesRepository.findAll();
         List<DroneBatteryHistory> droneBatteryHistories = droneList.stream().map(drone -> Util.getModelMapper().map(drone, DroneBatteryHistory.class)).collect(Collectors.toList());

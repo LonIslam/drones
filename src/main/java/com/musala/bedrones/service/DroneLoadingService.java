@@ -46,7 +46,7 @@ public class DroneLoadingService {
             List<Medication> medications = new ArrayList<>();
             medicationsRepository.findAllById(dronePackageDto.getMedicationsIds()).forEach(medications::add);
             int sum = medications.stream().map(Medication::getWeight).mapToInt(Integer::intValue).sum();
-            if (sum < droneOptional.get().getWeight()) {
+            if (sum <= droneOptional.get().getWeight()) {
                 DroneBasket droneBasket = new DroneBasket();
                 droneBasket.setDroneId(dronePackageDto.getDroneId());
                 droneBasket.setMedicationsIds(dronePackageDto.getMedicationsIds());

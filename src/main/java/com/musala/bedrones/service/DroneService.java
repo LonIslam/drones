@@ -29,7 +29,7 @@ public class DroneService {
     public ResponseEntity<DroneResponseDto> registerDrone(DroneDto droneDto) {
         Drone droneEntity = Util.getModelMapper().map(droneDto, Drone.class);
         dronesRepository.save(droneEntity);
-        return ResponseEntity.accepted().body(Util.getModelMapper().map(droneDto, DroneResponseDto.class));
+        return ResponseEntity.accepted().body(Util.getModelMapper().map(droneEntity, DroneResponseDto.class));
     }
 
     public ResponseEntity<List<DroneResponseDto>> getAvailableDrones() {
