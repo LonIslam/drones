@@ -17,8 +17,8 @@ import java.time.LocalDateTime;
 @Document(collection = "drones-battery-history")
 public class DroneBatteryHistory {
     @Id
+    private String auditId;
     private String id;
-    private String droneId;
     @Size(min = 1, max = 100)
     private String serialNo;
     @Min(value = 0)
